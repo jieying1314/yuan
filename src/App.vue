@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="content-div">
+      <!--<transition enter-active-class="animated zoomIn" leave-active-class="animated zoomOut">-->
+        <router-view/>
+      <!--</transition>-->
+    </div>
+  <Navbar class="footer"></Navbar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Navbar from '@/components/footer'
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  data () {
+    return {
+    }
+  },
+  components:{
+    Navbar
   }
 }
 </script>
@@ -23,6 +30,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.content-div{
+  margin-bottom:60px;
 }
 </style>
